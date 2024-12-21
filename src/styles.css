@@ -1,0 +1,271 @@
+.todo-app {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-task {
+  margin-bottom: 15px;
+}
+
+.search-task input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-task input:focus {
+  border-color: #007bff;
+}
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input,
+.add-task select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.add-task input:focus,
+.add-task select:focus {
+  border-color: #007bff;
+}
+
+.add-task button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-size: 16px;
+  color: #333;
+}
+
+.task-description {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.task-priority {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.delete-button,
+.edit-button {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  margin-left: auto;
+  transition: opacity 0.3s ease;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.edit-button {
+  background-color: green;
+}
+
+.task:hover .delete-button,
+.task:hover .edit-button {
+  opacity: 1;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters label {
+  font-size: 16px;
+  color: #333;
+}
+
+.filters input[type="checkbox"] {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.priority-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.priority-filters label {
+  font-size: 14px;
+  color: #333;
+}
+
+.task.completed .task-title {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.no-tasks-message {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.search-task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-task input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: 70%;
+}
+
+.search-task button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-task button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .todo-app {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .add-task input,
+  .add-task select,
+  .search-task input,
+  .search-task button {
+    font-size: 14px;
+  }
+
+  .task-title {
+    font-size: 14px;
+  }
+
+  .task-description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-app {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .add-task input,
+  .add-task select,
+  .search-task input,
+  .search-task button {
+    font-size: 12px;
+  }
+
+  .task-title {
+    font-size: 12px;
+  }
+
+  .task-description {
+    font-size: 10px;
+  }
+
+  .task {
+    padding: 8px;
+  }
+}
